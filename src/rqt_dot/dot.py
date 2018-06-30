@@ -3,7 +3,10 @@ import rospy
 
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
-from python_qt_binding.QtGui import QWidget
+try:
+    from python_qt_binding.QtGui import QWidget
+except:
+    from python_qt_binding.QtWidgets import QWidget
 from python_qt_binding.QtGui import QPalette
 from python_qt_binding.QtCore import Qt
 
